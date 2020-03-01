@@ -2,7 +2,6 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { ProductList } from './ProductList';
 
 
 function App() {
@@ -22,9 +21,7 @@ function App() {
           Learn React
         </a>
       </header>
-      <div className="Product">
-        <ProductList></ProductList>
-      </div>
+      
     </div>
   );
 }
