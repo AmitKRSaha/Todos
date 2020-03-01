@@ -1,0 +1,34 @@
+{
+    "paths": [
+        {
+            "name": "/items",
+            "lambdaFunction": "todof3196350",
+            "privacy": {
+                "open": true
+            }
+        }
+    ],
+    "resourceName": "api16244626",
+    "apiName": "api16244626",
+    "functionArns": [
+        {
+            "lambdaFunction": "todof3196350"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-todo-dev-220029-authRole",
+        "unAuthRoleName": "amplify-todo-dev-220029-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "todof3196350",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
