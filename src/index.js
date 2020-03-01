@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import { rootReducer } from './reduxstate/rootReducer';
+const reducer = combineReducers({ Names: rootReducer });
 
 let initialState = {
-    Name: 'Amit'
+    Names: { Name: 'Amit' }
 }
 
-const store = createStore(rootReducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
+const store = createStore(reducer, initialState, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(<Provider store={store}>
     <App />

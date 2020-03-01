@@ -1,8 +1,10 @@
-export function rootReducer(state = {}, action) {
-    console.log(state);
-    switch (action) {
+export function rootReducer(state = {}, { type, Name }) {
+    console.log('state  from reducer - ' + JSON.stringify(state));
+    console.log('type - ' + type);
+    console.log('Name - ' + Name);
+    switch (type) {
         case 'ADD_ITEM':
-            return { Name: 'Kumar' };
+            return { Name: Name };
         default:
             return state;
     }
